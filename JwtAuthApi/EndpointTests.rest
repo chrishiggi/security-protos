@@ -1,0 +1,11 @@
+POST http://localhost:5106/api/name/authenticate
+Content-Type: application/json
+
+{
+    "username": "test1",
+    "password": "pw1"
+}
+
+###
+GET http://localhost:5106/api/name
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QxIiwibmJmIjoxNjgwNTQyODM5LCJleHAiOjE2ODA1NDY0MzksImlhdCI6MTY4MDU0MjgzOX0.GoZ6nYAfGOVUZdTcxKcNBsjkTbkXa_s7-HgEEO-SHjc
