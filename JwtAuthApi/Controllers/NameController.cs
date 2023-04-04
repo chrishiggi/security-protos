@@ -7,6 +7,7 @@ using JwtAuthApi.Models;
 using JwtAuthApi.Services;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authorization;
+using System.Net.Mime;
 
 namespace JwtAuthApi.Controllers
 {
@@ -23,26 +24,29 @@ namespace JwtAuthApi.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<string>), StatusCodes.Status200OK)]
         public IEnumerable<string> Get() 
         {
             return new string[] { "California", "Nevada" };
         }
 
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         [AllowAnonymous]
         [HttpPost("authenticate")]
+        [Consumes(MediaTypeNames.Application.Json)]
+        [Produces(MediaTypeNames.Application.Json)]
+        [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status401Unauthorized)]
         public IActionResult Authenticate([FromBody]UserCred userCred)
         {
             var token = _jwtAuthenticationManager.Authenticate(userCred.Username, userCred.Password);
 
             if (token.IsNullOrEmpty())
             {
-                Unauthorized();
+                Unauthorized(new ErrorResponse 
+                {
+                    Message = "Unable to Authorize",
+                    Code = StatusCodes.Status401Unauthorized.ToString(),
+                });
             }
             return Ok(token);
         }
