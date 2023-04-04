@@ -8,6 +8,7 @@ using JwtAuthApi.Services;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authorization;
 using System.Net.Mime;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace JwtAuthApi.Controllers
 {
@@ -35,20 +36,16 @@ namespace JwtAuthApi.Controllers
         [Consumes(MediaTypeNames.Application.Json)]
         [Produces(MediaTypeNames.Application.Json)]
         [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status401Unauthorized)]
-        public IActionResult Authenticate([FromBody]UserCred userCred)
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public Results<Ok<string>, UnauthorizedHttpResult> Authenticate([FromBody]UserCred userCred)
         {
             var token = _jwtAuthenticationManager.Authenticate(userCred.Username, userCred.Password);
 
             if (token.IsNullOrEmpty())
             {
-                Unauthorized(new ErrorResponse 
-                {
-                    Message = "Unable to Authorize",
-                    Code = StatusCodes.Status401Unauthorized.ToString(),
-                });
+                return TypedResults.Unauthorized();
             }
-            return Ok(token);
+            return TypedResults.Ok(token);
         }
     }
 }
