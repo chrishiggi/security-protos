@@ -1,0 +1,27 @@
+@rootUrl=http://localhost:5199
+
+GET {{rootUrl}}/People
+
+###
+
+POST {{rootUrl}}/People
+Content-Type: application/json
+
+{
+    "id": 4,
+    "Name": "Joe"
+}
+
+###
+
+PUT {{rootUrl}}/People/4
+Content-Type: application/json
+
+{
+    "id": 4,
+    "name": "Joseph"
+}
+
+###
+
+DELETE {{rootUrl}}/People/4
