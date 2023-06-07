@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.001.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploadApi", "FileUploadApi\FileUploadApi.csproj", "{74E35147-C468-4DD7-BD80-3E049EC771B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicAuthApi", "BasicAuthApi\BasicAuthApi.csproj", "{98C115EE-9028-4635-B9CC-5A741AD9FDAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiltersExampleApi", "FiltersExampleApi\FiltersExampleApi.csproj", "{805BC072-76B6-4F4F-9428-31B1A9EB3C07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuthApi", "JwtAuthApi\JwtAuthApi.csproj", "{D5F7A6F0-31B7-4E77-A044-CC4EC2C223F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaStore", "PizzaStore\PizzaStore.csproj", "{47F52A10-E3C2-415D-94E9-FBE01C13D631}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleApi", "PeopleApi\PeopleApi.csproj", "{E302788A-CDAD-4051-9355-5EB8393DB444}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74E35147-C468-4DD7-BD80-3E049EC771B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E35147-C468-4DD7-BD80-3E049EC771B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E35147-C468-4DD7-BD80-3E049EC771B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E35147-C468-4DD7-BD80-3E049EC771B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C115EE-9028-4635-B9CC-5A741AD9FDAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C115EE-9028-4635-B9CC-5A741AD9FDAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C115EE-9028-4635-B9CC-5A741AD9FDAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C115EE-9028-4635-B9CC-5A741AD9FDAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{805BC072-76B6-4F4F-9428-31B1A9EB3C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{805BC072-76B6-4F4F-9428-31B1A9EB3C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{805BC072-76B6-4F4F-9428-31B1A9EB3C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{805BC072-76B6-4F4F-9428-31B1A9EB3C07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5F7A6F0-31B7-4E77-A044-CC4EC2C223F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F7A6F0-31B7-4E77-A044-CC4EC2C223F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F7A6F0-31B7-4E77-A044-CC4EC2C223F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F7A6F0-31B7-4E77-A044-CC4EC2C223F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47F52A10-E3C2-415D-94E9-FBE01C13D631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F52A10-E3C2-415D-94E9-FBE01C13D631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F52A10-E3C2-415D-94E9-FBE01C13D631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F52A10-E3C2-415D-94E9-FBE01C13D631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E302788A-CDAD-4051-9355-5EB8393DB444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E302788A-CDAD-4051-9355-5EB8393DB444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E302788A-CDAD-4051-9355-5EB8393DB444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E302788A-CDAD-4051-9355-5EB8393DB444}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1BF7653-CB1F-491F-9192-21664B0479A3}
+	EndGlobalSection
+EndGlobal

@@ -31,6 +31,14 @@ app.MapPut("/People/{id}", (int id, PersonModel p) =>
 
     return person;
 });
-app.MapDelete("/People/{id}", (int id) => people.Remove(people.Find(x => x.Id == id))!);
+app.MapDelete("/People/{id}", (int id) =>
+{
+    var p = people.Find(x => x.Id == id);
+
+    if (p is not null)
+    {
+        people.Remove(p);
+    }
+});
 
 app.Run();
