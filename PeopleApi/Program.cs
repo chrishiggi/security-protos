@@ -11,6 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
+//app.UseConventionalMiddleware();
+app.UseMiddleware<CustomHeaderMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -18,6 +21,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 
 app.MapGet("/People", () => people);
 app.MapPost("/People", (PersonModel p) => people.Add(p));
